@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "simbirsoft-test"
+version = "0.1.0"
+description = ""
+authors = ["Elena Rogozina <q.www.ta@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selene = "2.0.0rc4"
+pytest = "^8.0.0"
+allure-pytest = "^2.13.2"
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "--clean-alluredir",
+    "--alluredir=allure-results"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
